@@ -1,0 +1,113 @@
+[{"id":1,
+"tip":"Semidecomandat",
+"nrCam":2,
+"pret":1500,
+"status":"Neinchiriat"},
+{"id":2,
+"tip":"Decomandat",
+"nrCam":2,
+"pret":1700,
+"status":"Neinchiriat"},
+{"id":3,
+"tip":"Semidecomandat",
+"nrCam":3,
+"pret":2000,
+"status":"Neinchiriat"},
+{"id":4,
+"tip":"Circular",
+"nrCam":4,
+"pret":2500,
+"status":"Neinchiriat"},
+{"id":5,
+"tip":"Penthouse",
+"nrCam":5,
+"pret":3500,
+"status":"Neinchiriat"},
+{"id":6,
+"tip":"Garsoniera",
+"nrCam":1,
+"pret":1000,
+"status":"Neinchiriat"}
+]
+
+
+[{"idInchiriere":1,
+"idApartament":1,
+"idUser":202
+},
+{"idInchiriere":2,
+"idApartament":5,
+"idUser":100
+},
+{"idInchiriere":3,
+"idApartament":3,
+"idUser":400
+},
+{"idInchiriere":4,
+"idApartament":2,
+"idUser":531
+},
+{"idInchiriere":5,
+"idApartament":6,
+"idUser":401
+},
+{"idInchiriere":6,
+"idApartament":7,
+"idUser":206
+},
+{"idInchiriere":7,
+"idApartament":4,
+"idUser":1
+}]
+
+
+[{
+  "idUser": 1,
+  "tipUser":"admin",
+  "nume": "Admin",
+  "prenume": "Admin",
+  "user":"Admin",
+  "parola":"Admin_2022"
+},{
+  "idUser": 100,
+  "tipUser":"user",
+  "nume": "Popescu",
+  "prenume": "Nelu",
+  "user":"PNelu",
+  "parola":"pn_2022"
+}, {
+  "idUser": 202,
+  "tipUser":"user",
+  "nume": "Ionescu",
+  "prenume": "Gelu",
+  "user":"IGelu",
+  "parola":"igelu_2022"
+}, {
+  "idUser": 206,
+  "tipUser":"user",
+  "nume": "Dumitrescu",
+  "prenume": "Ana",
+  "user":"DAna",
+  "parola":"dana1988"
+}, {
+  "idUser": 400,
+  "tipUser":"user",
+  "nume": "Pirvu",
+  "prenume": "Mihai",
+  "user":"PMihai",
+  "parola":"pm_2021"
+}, {
+  "idUser": 401,
+  "tipUser":"user",
+  "nume": "Mitran",
+  "prenume": "Diana",
+  "user":"MDiana",
+  "parola":"md6662021"
+}, {
+  "idUser": 531,
+  "tipUser":"user",
+  "nume": "Pirvulescu",
+  "prenume": "Silvia",
+  "user":"PSilvia",
+  "parola":"ps19800227"
+}]

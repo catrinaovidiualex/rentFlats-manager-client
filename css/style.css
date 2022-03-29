@@ -1,0 +1,362 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+   
+    font-family: "Poppins", sans-serif;
+    margin:0px;
+}
+
+header{
+   
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+table{
+    width:80%;
+    height:100%;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+
+
+thead tr th{
+    border-bottom: 2px solid rgb(211, 131, 10);
+    font-size:18px;
+}
+tbody tr th {
+    color:rgb(131, 82, 10);
+    text-align: left;
+    padding: 5px;
+}
+
+tbody tr:nth-child(2n){
+
+    background-color:rgb(199, 197, 197);
+    width:100px;
+    height: 30px;
+
+}
+
+tbody tr:nth-child(2n+1){
+
+    background-color:rgb(248, 247, 247);
+    width:100px;
+    height: 30px;
+
+}
+
+button.inchiriazaApart {
+    
+    background-color: #04AA6D;
+    border: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding:5px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius:5px ;
+  }
+  button.inchiriazaApart:hover{
+      background-color: rgb(12, 141, 23);
+  }
+
+
+  button.adaugareApart {
+    
+    background-color: #04AA6D;
+    border: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding:5px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius:5px ;
+  }
+  button.adaugareApart:hover{
+      background-color: rgb(12, 141, 23);
+  }
+
+
+  button.stergeApart {
+    
+    background-color: #04AA6D;
+    border: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding:5px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius:5px ;
+  }
+  button.stergeApart:hover{
+      background-color: rgb(12, 141, 23);
+  }
+
+
+  button.modificaApart {
+    
+    background-color: #04AA6D;
+    border: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding:5px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius:5px ;
+  }
+  button.modificaApart:hover{
+      background-color: rgb(12, 141, 23);
+  }
+  
+  header h1{
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10px;
+     
+     
+ }
+ 
+ h3{
+     font-size: 20px;
+     padding:20px;
+ 
+ }
+  .container{
+    width:900px; 
+    display: flex;
+    text-align: left;
+    align-items: left;
+    justify-content: centeleft;
+    flex-direction: column;
+    
+    
+  }
+
+  .containerAddApart{
+    width:300px; 
+    display: flex;
+    text-align: left;
+    align-items: left;
+    justify-content: centeleft;
+    flex-direction: column;
+    
+    
+  }
+
+  .inputAddApart{
+    width:210px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-left: 20px;
+    
+    
+  }
+
+  .buttonsAddApart{
+    width:200px;
+    display:flex;
+    margin-top: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-left: 20px;
+
+  }
+
+
+  .newApart{
+    background-color: #04AA6D;
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding:5px;
+    width: 190px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius:5px ;
+    margin-bottom: 10px;
+
+  }
+
+  .newApart:hover{
+    background-color: rgb(12, 141, 23);
+}
+
+.anuleaza{
+    background-color: #04AA6D;
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding:5px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius:5px ;
+  }
+
+  .anuleaza:hover{
+    background-color: rgb(12, 141, 23);
+}
+
+
+.updateApart{
+    width:210px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-left: 20px;
+        
+  }
+
+  .buttonsUpdateApart{
+    width:220px;
+    display:flex;
+    margin-top: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-left: 20px;
+    
+
+  }
+
+
+   
+  .modifApart{
+    margin-bottom: 10px;
+    background-color: #04AA6D;
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    
+    width: 150px;
+    height:43px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    
+    border-radius:5px ;
+}
+
+.modifApart:hover{
+  background-color: rgb(12, 141, 23);
+}
+
+
+.anuleazaApart{
+    margin-bottom: 10px;
+    background-color: #04AA6D;
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    
+    width: 100px;
+    height:43px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    
+    border-radius:5px ;
+}
+
+.anuleazaApart:hover{
+  background-color: rgb(12, 141, 23);
+}
+
+.stergeApartament{
+  background-color: #04AA6D;
+  border: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  
+  width: 150px;
+  height: 43spx;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  
+  border-radius:5px ;
+  margin-bottom: 10px;
+}
+
+.stergeApartament:hover{
+  background-color: rgb(12, 141, 23);
+}
+
+.containerLogin{
+  border: 2px solid rgb(138, 179, 151);
+  background-color: #82c0a9;
+  width:250px;
+  height: 300px;
+  margin:auto;
+  margin-top:10%;
+  border-radius: 10px;
+  padding:5px;
+
+}
+.containerLogin h1{
+  color: rgb(3, 99, 11);
+  font-weight: bold;
+  text-align: center;
+  
+
+}
+
+.textField{
+  
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(3, 99, 11);
+  font-weight: bold;
+  
+}
+span{
+  
+  
+  transform: translate(45%,250%);
+  right:45px;
+  
+  cursor: pointer;
+}
+
+
