@@ -1,13 +1,17 @@
-import Apartament from "../model/Apartament.js";
+
 import Home from "../view/Home.js";
-import ControlApartament from "../controller/ControlApartament.js"
+import Data from "../Api.js";
+
 
 class AddFlat{
     constructor(){
     this.containerAddApart=document.querySelector(".container");
     this.createPageAddApart();
-    this.controler=new ControlApartament();
-    this.apartamanet=new Apartament();
+    // luam un obiect gol de tip carte pt a adauga valorile din api in obiect;
+    this.apartament= {};
+    
+    
+    
     }
 
 
@@ -45,10 +49,10 @@ this.containerAddApart.innerHTML=`
 
         let obj=e.target;
 
-        if(obj.classList.contains("idApart")){
+        /*if(obj.classList.contains("idApart")){
            this.apartament.id=obj.value;
           
-       }
+       }*/
 
 
         if(obj.classList.contains("tipApart")){
@@ -75,12 +79,13 @@ this.containerAddApart.innerHTML=`
 
 
 
-       console.log(this.apartament);
+       //console.log(this.apartament);
 
     }
 
     handleClickAdd=()=>{
-        this.controler.adaugareApartamentNou(this.apartamanet);
+        console.log(this.apartament);
+        let d= new Data();
         new Home();
     }
 
