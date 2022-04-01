@@ -9,6 +9,16 @@ class AddFlat{
     this.createPageAddApart();
     // luam un obiect gol de tip carte pt a adauga valorile din api in obiect;
     this.apartament= {};
+
+    this.inputFlats= document.querySelector(".inputAddApart");
+
+    this.inputFlats.addEventListener("input",this.handleChangeApart);
+    this.add=document.querySelector(".newApart");
+
+    this.add.addEventListener("click",this.handleClickAdd);
+
+    this.cancelBtn=document.querySelector(".anuleaza");
+    this.cancelBtn.addEventListener("click",this.handleClickCancel);
     
     
     
@@ -88,6 +98,10 @@ this.containerAddApart.innerHTML=`
         let d= new Data();
         new Home();
     }
+    handleClickCancel=()=>{
+        new Home();
+
+  }  
 
 }
 
