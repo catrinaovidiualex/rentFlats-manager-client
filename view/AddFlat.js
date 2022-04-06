@@ -96,6 +96,7 @@ this.containerAddApart.innerHTML=`
     handleClickAdd=()=>{
         console.log(this.apartament);
         let d= new Data();
+        d.addFlat(this.apartament);
         new Home();
     }
     handleClickCancel=()=>{

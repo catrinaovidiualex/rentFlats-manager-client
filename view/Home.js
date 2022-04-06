@@ -1,13 +1,16 @@
-import ControlApartament from "../controller/ControlApartament.js";
+
 import AddFlat from "../view/AddFlat.js";
+import Data from "../Api.js";
 import UpdateFlat from "../view/UpdateFlat.js";
 
+
 class Home{
-    constructor(user){
+    constructor(){
+    this.data= new Data();
 
     this.container=document.querySelector(".container");
     this.createHomePage();
-    this.controlerApart=new ControlApartament();
+ 
     this.populateTable();
 
     this.btnAddFlat=document.querySelector(".adaugareApart");

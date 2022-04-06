@@ -1,4 +1,4 @@
-import ControlApartament from "../controller/ControlApartament.js";
+
 import Apartament from "../model/Apartament.js";
 
 import Home from "../view/Home.js";
