@@ -31,20 +31,20 @@ class Home{
         this.container.innerHTML=`
         <h3>Lista apartamente de inchiriat</h3>
         
-        <button class="adaugareApart">Adaugare</button>
-        <button class="stergeApart">Stergere</button>
-        <button class="modificaApart">Modificare</button>
-                    
+        <button class="adaugareApart">Add Flat</button>
+        <label for="text">Filter by type<label>
+        <input type="text" class="inputFilter"></input>
+                           
         
         <table class="tableFlats">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Tip Apartament</th>
-                    <th scope="col">Numar camere</th>
-                    <th scope="col">Pret</th>
+                    <th scope="col">Type flat</th>
+                    <th scope="col">Number of rooms</th>
+                    <th scope="col">Pice</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Detalii</th>
+                    <th scope="col">Info</th>
                     
 
                 </tr>
@@ -56,6 +56,14 @@ class Home{
             </tbody>
 
         </table>
+
+    <div class="otherButtons">
+        <button class="anuleaza">Cancel</button>
+        <button class="sortare">Sort by Price</button>
+        <button class="sortAuthor">Sort by Author</button>
+        <button class="newBook">Newest Book</button>
+             
+    </div>
         
         
         `
@@ -63,22 +71,48 @@ class Home{
     }
 
 
-    populateTable=()=>{
+    populateTable= async()=>{
+
+        let flats= await this.data.flats();
 
 
         let table=document.querySelector(".table");
+        table.innerHTML="";
 
-        this.controlerApart.list.forEach((e)=>{
+        flats.forEach((e)=>{
 
             table.innerHTML+=`
           
             <tr>
               <th scope="row">${e.id}</th>
-              <td>${e.tip}</td>
+              <td class="linkFlats">${e.tip}</td>
               <td>${e.nrCam}</td>
               <td>${e.pret}</td>
               <td>${e.status}</td>
-              <td><button class="inchiriazaApart">Inchiriaza</button></td>
+              <td><button class="inchiriazaApart">Rent</button></td>
+            </tr>
+                
+            `
+        })
+     }
+
+     populateSortedTable=(arr)=>{
+         console.log(arr);
+
+        let table=document.querySelector(".table");
+        table.innerHTML="";
+
+        arr.forEach((e)=>{
+
+            table.innerHTML+=`
+          
+            <tr>
+              <th scope="row">${e.id}</th>
+              <td class="linkFlats">${e.tip}</td>
+              <td>${e.nrCam}</td>
+              <td>${e.pret}</td>
+              <td>${e.status}</td>
+              <td><button class="inchiriazaApart">Rent</button></td>
             </tr>
                 
             `
@@ -96,20 +130,99 @@ class Home{
 
      }
 
+
+     handleSelectFlat=(e)=>{
+        
+
+        let obj=e.target;
+  
+        if(obj.classList.contains("linkFlats")){
+         
+            // extragem tipul apartamentului
+            
+
+            let id=obj.parentNode.parentNode.id
+           
+           // afiseaza id-ul de mai sus
+
+
+           new UpdateFlat(id);
+
+  
+  
+        }
+  
+      }
      // de verificat daca e ok 
      handleUpdateApart=(e)=>{
 
         let obj=e.target;
-        new UpdateFlat(obj.id);
+        new UpdateFlat(obj);
       
      }
 
-     handleUpdateApart=(e)=>{
+     
+     handleSort=async(e)=>{
         let obj=e.target;
+        if(obj.classList.contains("sortare")){
 
-        console.log(obj);
+         let sortedFlats=await this.data.sortFlats();
+
+         this.populateSortedTable(sortedFlats);
+
+        }
+
+      
 
      }
+
+   handleFilter=async(e)=>{
+      let obj=e.target;
+
+
+      try{
+         if(e.code=="Enter"){
+
+            let filteredBooks=await this.data.filterByTitle(this.btnFilterBooks.value);
+
+
+           
+            this.populateSortedTable(filteredBooks);
+
+
+
+
+
+         }
+
+      }catch(e){
+
+         console.log(e);
+      }
+
+      }
+
+      handleNewestBook=async(e)=>{
+
+        let obj=e.target;
+         if(obj.classList.contains("newBook")){
+
+            let newestBook=await this.data.showNewestBook();
+
+            this.populateSortedTable([newestBook]);
+
+         }
+
+      }
+  
+        
+     handleClickCancel=()=>{
+     
+      new Home();
+
+      } 
+
+    
 
 
 
