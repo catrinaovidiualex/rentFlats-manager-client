@@ -29,7 +29,7 @@ class Home{
     createHomePage=()=>{
 
         this.container.innerHTML=`
-        <h3>Lista apartamente de inchiriat</h3>
+        <h3>Rental list of flats</h3>
         
         <button class="adaugareApart">Add Flat</button>
         <label for="text" class="filterLabel">Filter by type<label>
