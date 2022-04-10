@@ -17,9 +17,9 @@ class Home{
     this.btnAddFlat.addEventListener("click",this.handleClickApart);
 
 
-    this.btnUpdateFlat=document.querySelector(".modificaApart");
-    this.btnUpdateFlat.addEventListener("click",this.handleUpdateApart);
-    this.user=user;
+    /*this.btnUpdateFlat=document.querySelector(".modificaApart");
+    this.btnUpdateFlat.addEventListener("click",this.handleUpdateApart);*/
+    
 
 
 
@@ -60,8 +60,8 @@ class Home{
     <div class="otherButtons">
         <button class="anuleaza">Cancel</button>
         <button class="sortare">Sort by Price</button>
-        <button class="sortAuthor">Sort by Author</button>
-        <button class="newBook">Newest Book</button>
+        <button class="sortAuthor">Sort by Number of Rooms</button>
+        <button class="newBook">Newest Flat</button>
              
     </div>
         
@@ -86,7 +86,7 @@ class Home{
             <tr>
               <th scope="row">${e.id}</th>
               <td class="linkFlats">${e.tip}</td>
-              <td>${e.nrCam}</td>
+              <td>${e.nrcam}</td>
               <td>${e.pret}</td>
               <td>${e.status}</td>
               <td><button class="inchiriazaApart">Rent</button></td>
@@ -154,12 +154,12 @@ class Home{
   
       }
      // de verificat daca e ok 
-     handleUpdateApart=(e)=>{
+     /*handleUpdateApart=(e)=>{
 
         let obj=e.target;
         new UpdateFlat(obj);
       
-     }
+     }*/
 
      
      handleSort=async(e)=>{

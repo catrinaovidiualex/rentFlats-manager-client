@@ -1,5 +1,5 @@
 
-import Apartament from "../model/Apartament.js";
+
 
 import Home from "../view/Home.js";
 
@@ -10,7 +10,7 @@ export default class UpdateFlat{
 
         this.createUpdatePage();
 
-        this.controllerApartamente=new ControlApartament();
+      
 
         this.apartament=this.controllerApartamente.getApartById(id);
       

@@ -1,11 +1,8 @@
-import ControlApartament from "./controller/ControlApartament.js";
-import Apartament from "./model/Apartament.js"
 
 import Home from "./view/Home.js";
-import Login from "./view/Login.js";
+import Data from "./Api.js";
 
-let ca= new ControlApartament();
-new Login();
+new Home();
 
 /*let a1= new Apartament(8,"Semidecomandat",3,1950,"Neinchiriat");
 
