@@ -91,6 +91,10 @@ button.inchiriazaApart {
       background-color: rgb(12, 141, 23);
   }
 
+  .filterLabel{
+    padding:20px;
+  }
+
 
   button.stergeApart {
     
@@ -215,10 +219,10 @@ button.inchiriazaApart {
 .anuleaza{
     background-color: #04AA6D;
     border: none;
-    font-size: 18px;
+    font-size: 16px;
     color: #FFFFFF;
     padding:5px;
-    width: 100px;
+    width: 80px;
     text-align: center;
     text-decoration: none;
     overflow: hidden;
@@ -231,7 +235,62 @@ button.inchiriazaApart {
     background-color: rgb(12, 141, 23);
 }
 
+.sortare{
+  background-color: #04AA6D;
+  border: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding:5px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: 20px;
+  border-radius:5px ;
+}
 
+.sortare:hover{
+  background-color: rgb(12, 141, 23);
+}
+
+.sortAuthor{
+  background-color: #04AA6D;
+  border: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding:5px;
+  width: 110px;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: 20px;
+  border-radius:5px ;
+}
+
+.sortAuthor:hover{
+  background-color: rgb(12, 141, 23);
+}
+
+.newestFlat{
+  background-color: #04AA6D;
+  border: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding:5px;
+  width: 110px;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: 20px;
+  border-radius:5px ;
+}
+
+.newestFlat:hover{
+  background-color: rgb(12, 141, 23);
+}
 .updateApart{
     width:210px;
     display:flex;

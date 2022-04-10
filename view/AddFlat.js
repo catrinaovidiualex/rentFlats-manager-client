@@ -71,7 +71,7 @@ this.containerAddApart.innerHTML=`
          
         }
         if(obj.classList.contains("nrCamApart")){
-            this.apartament.nrCam=obj.value;
+            this.apartament.nrcam=obj.value;
            
         }
 

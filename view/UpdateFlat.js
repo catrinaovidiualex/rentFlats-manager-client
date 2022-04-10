@@ -12,7 +12,7 @@ export default class UpdateFlat{
 
       
 
-        this.apartament=this.controllerApartamente.getApartById(id);
+        /*this.apartament=this.controllerApartamente.getApartById(id);*/
       
        
       
