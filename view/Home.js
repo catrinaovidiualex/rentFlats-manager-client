@@ -1,24 +1,28 @@
 
 import AddFlat from "../view/AddFlat.js";
-import Data from "../Api.js";
+import Api from "../Api.js";
 import UpdateFlat from "../view/UpdateFlat.js";
 
 
 class Home{
-    constructor(){
-    this.data= new Data();
+    constructor(id){
+    this.api= new Api();
+    this.id=id;
 
     this.container=document.querySelector(".container");
     this.createHomePage();
  
     this.populateTable();
+    this.flat={id:id};
 
     this.btnAddFlat=document.querySelector(".adaugareApart");
     this.btnAddFlat.addEventListener("click",this.handleClickApart);
 
 
-    /*this.btnUpdateFlat=document.querySelector(".modificaApart");
-    this.btnUpdateFlat.addEventListener("click",this.handleUpdateApart);*/
+    /*this.btnRentFlat=document.querySelector(".inchiriazaApart");
+    this.btnRentFlat.addEventListener("click",this.handleRentFlat);*/
+    this.btnDeleteFlat=document.querySelector(".stergeApart");
+    this.btnDeleteFlat.addEventListener("click",this.handleDeleteFlat);
     
 
 
@@ -64,8 +68,7 @@ class Home{
         <button class="newestFlat">Newest Flat</button>
              
     </div>
-        
-        
+                
         `
 
     }
@@ -73,7 +76,7 @@ class Home{
 
     populateTable= async()=>{
 
-        let flats= await this.data.flats();
+        let flats= await this.api.flats();
 
 
         let table=document.querySelector(".table");
@@ -134,21 +137,13 @@ class Home{
 
      }
 
-
-     handleSelectFlat=(e)=>{
+// check it with Bogdan
+     /*handleRentFlat=async(e)=>{
         
 
         let obj=e.target;
   
-        if(obj.classList.contains("linkFlats")){
-         
-            // extragem tipul apartamentului
-            
-
-            let id=obj.parentNode.parentNode.id
-           
-           // afiseaza id-ul de mai sus
-
+        
 
            new UpdateFlat(id);
 
@@ -156,15 +151,18 @@ class Home{
   
         }
   
-      }
-     // de verificat daca e ok 
-     /*handleUpdateApart=(e)=>{
+      }*/
 
-        let obj=e.target;
-        new UpdateFlat(obj);
-      
-     }*/
+      handleDeleteFlat=async(e)=>{
+        e.preventDefault();
+        /*console.log("apartamentul a fost sters");*/
+        await this.api.deleteFlat(this.flat.id);
 
+        new Home();
+          
+    
+        }
+         
      
      handleSort=async(e)=>{
         let obj=e.target;

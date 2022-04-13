@@ -7,14 +7,13 @@ class AddFlat{
     constructor(){
     this.containerAddApart=document.querySelector(".container");
     this.createPageAddApart();
-    // luam un obiect gol de tip carte pt a adauga valorile din api in obiect;
+    // luam un obiect gol de tip apartament pt a adauga valorile din api in obiect;
     this.apartament= {};
 
     this.inputFlats= document.querySelector(".inputAddApart");
-
     this.inputFlats.addEventListener("input",this.handleChangeApart);
-    this.add=document.querySelector(".newApart");
 
+    this.add=document.querySelector(".newApart");
     this.add.addEventListener("click",this.handleClickAdd);
 
     this.cancelBtn=document.querySelector(".anuleaza");
@@ -31,9 +30,6 @@ this.containerAddApart.innerHTML=`
 <div class="inputAddApart">
             <h3>Apartament Nou</h3>
 
-            <label for="text">ID</label>
-            <input type="text" class="idApart"></input>
-
             <label for="text">Tip<label>
             <input type="text" class="tipApart"></input>
 
@@ -48,8 +44,8 @@ this.containerAddApart.innerHTML=`
         </div>
 
         <div class="buttonsAddApart">
-            <input type="submit" value="Adauga apartament" class="newApart">
-            <button class="anuleaza">Anuleaza</button>
+            <input type="submit" value="Add new flat" class="newApart">
+            <button class="anuleaza">Cancel</button>
         </div>
 
 `
@@ -97,7 +93,9 @@ this.containerAddApart.innerHTML=`
         console.log(this.apartament);
         let d= new Data();
         d.addFlat(this.apartament);
+       
         new Home();
+       
     }
     handleClickCancel=()=>{
         new Home();
